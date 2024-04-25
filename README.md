@@ -57,46 +57,27 @@ Through a meticulous analysis of industry demands, job market trends, and emergi
 
 <br>
 
-## 📌 **Data Scraping**
+## 📌 **Data Source**
 
-<p align="center">
-    <kbd> <img width="1000" alt="bref" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/BRef.jpg"> </kbd> <br>
-</p>
+Stack Overflow, a popular website for developers, conducted an online survey of software professionals across the world. The survey data was later open sourced by Stack Overflow. The actual data set has around 90,000 responses. The dataset used in this notebook comes from the following [source](https://stackoverflow.blog/2019/04/09/the-2019-stack-overflow-developer-survey-results-are-in/) under a ODbL: Open Database License. **Note:** this randomised subset contains around 1/10th of the original data set.
 
-The data utilized in this analysis and predictive modeling will be sourced from a website that hosts various basketball databases, [basketball-reference.com](https://www.basketball-reference.com/). The following data will be scraped, including:
-- **MVP voting results:** Distribution of votes among players who received at least one vote each season.
-- **Players basic stats:** All stats typically recorded in the official box score, aggregated per game for counting stats and per year for percentage stats.
-- **Players advanced stats:** Analytical stats formulated and calculated using basic stats.
-- **Team stats:** Stats concerning team performance and record for each season.
+[This file](https://github.com/kudou88/In-Demand-Data-Tech-Skills/blob/52e1577eb7957a937c3b6c0c7223cdd450b50653/about_dataset.pdf) list the questions asked in the survey and a general description of each questions.
 
-All this data is scraped for the period from 2001 to present.
-
-<br>
-
-## 📌 **Data Integration**
-
-In this section, all datasets will be merged into a single dataset for analysis and prediction. Before proceeding, we will conduct feature selection to eliminate columns that are unnecessary, redundant, or contain similar information to columns that will be used in the analysis.
+There are two CSV files from this Stack Overflow survey.
+- The first file *`m5_survey_data_technologies_normalised.csv`* contains a list of programming skills that are currently being used and would like to be work in over next five years (by each respondent). 
+- The second file *`m5_survey_data_demographics.csv`* contains demographic information for each respondent who filled out this survey.
 
 <br>
 
 ## 📌 **Data Preprocessing**
 
-The data cleaning section will involve various processes such as correcting errors, adjusting data types, handling missing values, managing duplicates, and so on. In the data transformation section, various processes will be performed, including adding new columns or features, handling outliers, encoding variables, correcting errors, and creating and transforming new columns.
-
-<br>
-
-### Data Type
-
-All columns in this table are currently of string data type. Columns such as `Year`, `Age`, `G`, and other basketball stats should be converted to numeric format.
+The data cleaning section will involve various processes such as correcting errors, adjusting data types, handling missing values, managing duplicates, and so on.
 
 <br>
 
 ### Missing Values
 
-We have identified three categories for the columns with missing values:
-- `Vote_Share`: All missing values in this feature indicate that the players did not receive any MVP votes.
-- **Team Stats**: Columns related to team stats have consistent missing values across them, indicating a common factor for these missing values.
-- **Player Stats**: Several columns related to player stats, particularly shooting percentages, contain missing values.
+Based on the quick overview of the datasets, there are numerous missing values present. However, during the survey, respondents were permitted to provide no answer or skip questions. Therefore, all missing values in this dataset (*except in cases where an entire respondent/record/feature consists of missing values*) will not be handled and will be used as they are.
 
 <br>
 
@@ -106,101 +87,71 @@ The dataset contains 0 duplicated records.
 
 <br>
 
-### Correcting Errors & Inconsistencies
-
-In the dataset, there are 17 unique values for `Position` column. In basketball, especially the NBA, there are five primary positions used: PG, SG, SF, PF, and C. Therefore, there may be potential errors or inconsistencies here. 
-
-There are quite a lot of players recorded as having multiple positions. In reality, there should be many more players recorded as having multiple positions, especially in this *position-less* era in the NBA. However, to make our data and analysis more consistent, we will use the first position recorded in the dataset.
-
-<br>
-
-### Creating New Columns
-
-These are another set of columns or features created to assist in analyzing and predicting an MVP in the NBA.
-
-Table 1 — Feature Engineering
- **New Feature** | **Explanation** |
------------------|--------------|
-MVP_rank | MVP ranking of each player for each year  
-Overall_Standings | Overall standing of a team in each year
-Conf_Standings | Conference standing of a team in each year
-Stats_zscore | New features by transforming and standardizing all statistics within each year
-prior_mvp_winner | Have you won an MVP before?
-last_season_mvp | Did you win the MVP last year?
-last_two_season_mvp | Did you win the last two MVPs?
-total_mvp_currently | How many MVPs have you won before the current season?
-
-<br>
-
 ## 📌 **Exploratory Data Analysis**
 
-The Exploratory Data Analysis (EDA) will focus on analyzing all available data and information related to winning the NBA MVP award. It will primarily be divided into:
-- Player Attributes
-- Player Basic Stats
-- Player Advanced Stats
-- Teams Performance
+### Programming Language
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/a_lang1.png"> </kbd>
+</p>
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/a_lang2.png"> </kbd>
+</p>
+
+**Among the top 5 programming languages currently in use or sought after, `TypeScript` demonstrates the most significant growth at 26.49%, while `Bash/Shell/PowerShell` experiences the most notable decline at -33.28%.**
 
 <br>
 
-### Player Attributes
+### Database
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/vote_share.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/a_db1.png"> </kbd>
 </p>
 
 <p align="center">
-    <kbd> <img width="1000" alt="pos" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/position.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/a_db2.png"> </kbd>
 </p>
 
-**Key Points:**
-- MPV winners consistently receive high vote shares, often close to or exceeding 90%, indicating strong support from NBA voters for their MVP candidacy.
-- Despite the subjective nature of MVP voting, the consistently high vote shares for winners suggest a certain level of consensus among voters regarding the most deserving candidate. However, there may still be biases or factors influencing the voting process, such as media coverage, team success, or individual narratives.
-- While power forwards and point guards have historically dominated MVP awards from 2001 to 2023, the last three MVP winners have been centers. Centers are traditionally known for their defensive presence, rebounding, and rim protection, but recent MVP-winning centers also excel offensively, showcasing versatility in their skill sets.
+**Among the top 5 databases presently in use or sought after, 'Elasticsearch' exhibits the most substantial growth at 46.16%, whereas 'MySQL' experiences the most considerable decline at -40.01%.**
 
 <br>
 
-### Player Basic Stats
+### Platform
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/basic%20stats.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/a_platform1.png"> </kbd>
 </p>
 
-**Key Points:**
-- MVP winners exhibit superior performance across various statistical categories compared to both MVP vote-getters and all players.
-- **Statistical excellence, particularly in scoring, shooting efficiency, playmaking, and defensive contributions, appears to be a common trait among MVP winners.**
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/a_platform2.png"> </kbd>
+</p>
+
+**Among the top 5 platforms currently utilized or aspired to, `Docker` demonstrates the most significant growth at 32.57%, whereas `Windows` experiences the most notable decline at -30.11%.**
 
 <br>
 
-### Player Advanced Stats
+### Web Frame
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/adv%20stats.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/a_webframe1.png"> </kbd>
 </p>
 
 <p align="center">
-    <kbd> <img width="1000" alt="pos" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/bpm.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/a_webframe2.png"> </kbd>
 </p>
 
-**Key Points:**
-- Advanced/analytical statistics provide a more nuanced understanding of player performance, focusing on efficiency, usage, and impact on both ends of the court.
-- MVP winners consistently demonstrate superior performance across various advanced metrics compared to both MVP vote-getters and all players, emphasizing their overall impact and contribution to their teams' success.
-- It's undeniable that OBPM can provide more insight into a player's value than DBPM. A player can receive MVP votes solely based on their offensive performance, even if they have little defensive impact while on the court. However, it's worth noting that many MVP winners also have high DBPM, which sets them apart from other vote-getters.
+**Among the top 5 web frameworks currently utilized or sought after, `Vue.js` exhibits the most substantial growth at 111.65%, whereas `jQuery` experiences the most significant decline at -51.59%.**
 
 <br>
 
-### Team Stats
+### IDE
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/team%20stats.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/a_ide.png"> </kbd>
 </p>
 
-<p align="center">
-    <kbd> <img width="1000" alt="pos" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/team%20win%20vs%20win%20share.png"> </kbd> <br>
-</p>
-
-**Key Points:**
-- Teams with MVP-caliber players tend to outperform their counterparts in terms of offensive and defensive efficiency, margin of victory, win-loss records, and overall and conference standings.
-- Higher overall and conference standings among MVP-winning teams reflect their ability to elevate team performance and competitiveness, positioning them as key leaders in guiding their teams to success within their respective conferences and the league as a whole.
+<br>
 
 <br>
 
