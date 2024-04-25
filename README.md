@@ -89,6 +89,10 @@ The dataset contains 0 duplicated records.
 
 ## 📌 **Exploratory Data Analysis**
 
+### </> Tech Skills Dataset
+
+<br>
+
 ### Programming Language
 
 <p align="center">
@@ -150,6 +154,100 @@ The dataset contains 0 duplicated records.
 <p align="center">
     <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/a_ide.png"> </kbd>
 </p>
+
+<br>
+
+### 👥 Demographic Dataset
+
+<br>
+
+### Respondent Description
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/b_desc.png"> </kbd>
+</p>
+
+The majority of respondents who took this survey described themselves as a developer as a profession.
+
+<br>
+
+### Age
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/b_age.png"> </kbd>
+</p>
+
+The majority of respondents who took part in this survey were in the range of 25-35 years.
+
+<br>
+
+### Gender
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/b_gender.png"> </kbd>
+</p>
+
+In the developer profession, the male gender still dominates compared to other genders.
+
+<br>
+
+### Country
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/b_country.png"> </kbd>
+</p>
+
+The graph above contains the 20 countries with the highest number of respondents in this survey. Most respondents came from the United States. Furthermore, most of the other respondents came from India, UK, Germany, and Canada.
+
+<br>
+
+### Formal Education Level
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/b_edu.png"> </kbd>
+</p>
+
+The majority of the last education level of the respondents in this survey is Bachelor Degree. After that there is a Master Degree and some college/university study (without degree).
+
+<br>
+
+### Undergrad Major / Field of Study
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/b_major.png"> </kbd>
+</p>
+
+The majority of the majors taken by respondents who work as developers are **computer science, computer engineering, or software engineering**. Other majors taken by the developers in this survey are **information systems, information technology, or system administration**; **another engineering discipline (ex. civil, electrical, mechanical);** and **web development or web design**. Almost all majors taken by respondents with the developer profession are majors in the IT field.
+
+<br>
+
+### Non-degree Education
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/b_nondeg.png"> </kbd>
+</p>
+
+In addition to formal education, various activities/other education (non-degree) can also be used to gain knowledge, experience, and even get a profession as a developer. The non-formal activities/education most used by respondents are **self-taught, online courses, and on-the-job training.**
+
+<br>
+
+### Developer Type / Job Title
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/b_devtype.png"> </kbd>
+</p>
+
+The majority of respondents in this survey have positions as full-stack developer, back-end developer, front-end developer, desktop developer, and mobile developer. **Of all respondents, there are 802 people who work as data/business analysts.**
+
+<br>
+
+### Salary
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/b_salary.png"> </kbd>
+</p>
+
+The annual salary distribution of the survey respondents is in the form of a right-skewed distribution. The majority of annual salaries are in the range of $27,000-$100,000. The largest annual salary in this dataset is $2,000,000.
 
 <br>
 
