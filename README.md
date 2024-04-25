@@ -40,6 +40,9 @@
       - [Annual Salary Comparison For Total Skill(s) Used - DA](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#missing-values)
       - [Annual Salary Comparison For Each Tech Skills - DA](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#missing-values)
 - [Conclusion](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#-predictive-modeling)
+  	- [Tech Skill(s)](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#missing-values)
+  	- [Demographic Information(s)](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#missing-values)
+  	- [Salary Comparison Using Tech Skill(s)](https://github.com/buddymar/NBA-MVP-Predictions/blob/main/README.md#missing-values)
 
 <br>
 
@@ -251,75 +254,116 @@ The annual salary distribution of the survey respondents is in the form of a rig
 
 <br>
 
-<br>
+### 👨🏻‍💻 Data Analyst
 
-## 📌 **Predictive Modeling**
-
-To predict the NBA MVP from this dataset, three models will be compared: Random Forest, XGBoost, and Extra Trees Regressor. The best-performing model will then be used for predicting and tracking the current season's NBA MVP. Given the imbalanced nature of the target variable, which often includes many zero values, the Root Mean Squared Logarithmic Error (RMSLE) will be used as the scoring metric.
+In this section, we will analyze more specifically related developer skills and demographics of respondents who have a profession as a data analyst. From this section, it will be known what skills are currently used by respondents in the data analyst profession in their respective industries. In addition, it can also be seen what skills will be used in the next few years in the data analyst profession. Finally, the demographics of the data analyst profession will also be analyzed, such as the latest education major, non-formal education undertaken, salary range, and other demographic factors.
 
 <br>
 
-### Modeling
-
-Table 2 — Model Scoring
- **Model** | **RMSLE** | **R-squared** | **Best Hyperparameters** |
------------------|--------------|--------------|--------------|
-RandomForestRegressor | 0.2333 | 0.9063 | 'max_depth': 8, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 6, 'n_estimators': 100
-ExtraTreesRegressor | 0.2408 | 0.9087 | 'max_depth': 7, 'max_features': 'auto', 'min_samples_leaf': 3, 'min_samples_split': 6, 'n_estimators': 100
-XGBRegressor | 0.155 | 0.9705 | 'colsample_bytree': 1.0, 'gamma': 0.1, 'learning_rate': 0.05, 'max_depth': 6, 'min_child_weight': 3, 'n_estimators': 63, 'reg_alpha': 0.5, 'reg_lambda': 1.0, 'subsample': 0.9
-<br>
-
-### Model Prediction
+### Tech Skills - DA
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/model%20prediction.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/c_tech.png"> </kbd>
 </p>
 
-**Key Points:**
-- Based on the NBA MVP predictions for 2001-2023 winners, the XGBoost model had the best performance, achieving the highest accuracy with 22 correct predictions out of 23 winners. The Extra Trees model made 19 correct predictions, while the Random Forest model made 18 correct predictions.
-- Interestingly, all three models incorrectly predicted the MVP for the 2017 season, selecting James Harden instead of Russell Westbrook.
-- Moreover, all three models predict Nikola Jokić as the MVP for the current 2024 season (as of March), with a high predicted vote share.
-- Overall, the models demonstrated high accuracy in predicting the NBA MVP, with XGBoost leading the pack with an accuracy ratio of 22 out of 23 (95.65%).
+Based on a survey conducted on professional data analysts, the most widely used programming languages today are `SQL, JavaScript, HTML, Python,` and `Bash`. Another programming language that will be desired in the next few years (besides the one used now) is `C#`.
+
+The most widely used databases today are `MySQL, Microsoft SQL, PostgreSQL, SQLite,` and `MongoDB`. The desired database in the next few years tends to be the same as the database that is currently used.
+
+Then, the most widely used platforms today are `Windows, Linux, Docker, AWS,` and `Android`. The desired platform in the next few years tends to be the same as the platform currently used.
+
+For Web Frames, the most used today are `jQuery, ASP.NET, Angular, React.js,` and `Django`. Another Web Frame that will be desired in the next few years is `Vue.js`.
 
 <br>
 
+### Formal Education Level - DA
+
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/top3%20mvp.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/c_edu.png"> </kbd>
 </p>
 
-**Key Points (as of March 2024):**
-- Nikola Jokić, with the highest PER, WS, and BPM, likely contributes significantly to the model predicting him as the number one of the top 10 MVP frontrunners.
-- Shai Gilgeous-Alexander (2nd) and Giannis Antetokounmpo (3rd) still have a chance to move up in the MVP ranking ladder based on their actual basic stats, advanced stats, team standings, and vote share prediction.
-- Luka Dončić leads in PTS per game (34.1) this season, with a considerable gap to the second highest, Shai Gilgeous-Alexander (30.9). This contributes to Dončić being in 4th place currently, despite his team's poor standings.
+The majority of the last educational level for the data analyst profession is Bachelor Degree. After that, other education levels are Master Degree and some college/university study (without degree). The distribution of the last educational level of the Data Analyst profession tends to be the same as the distribution for all developer professions as shown previously.
 
 <br>
 
-### Model Interpretation
+### Undergrad Major / Field of Study - DA
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/shap%20value.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/c_major.png"> </kbd>
 </p>
 
-The feature with the highest impact on the XGBoost model prediction is `adj_W%`, which represents the team's winning percentage adjusted by the total basic stats of the player. The impact gap from this feature to the next feature is considerable. Following closely are the next two impactful features for the model: `Total_AdvStat`, representing the total advanced stats for the player, and adjusted `BPM`, which indicates the Box Plus/Minus of the player.
-
-<p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/shap%20bee.png"> </kbd> <br>
-</p>
-
-From the beeswarm plot, we can discern in greater detail the influence of each feature in this model. The plot vividly illustrates the wide range of impact from the `adj_W` feature. Additionally, it's apparent that features with high-value records exert the most influence on the model's predictions. Conversely, most low-value records result in zero impact across all features, except for `AST`, `Age`, and `Year`.
+The majority of the majors taken by the Data Analyst are computer science/computer engineering/software engineering. In addition, other majors taken are information systems/information technology/system administration; and non-IT engineering. Almost all majors taken by respondents with the Data Analyst profession are also majors in the IT field. **The majors that tend to be more in the Data Analyst profession than other developer professions are mathematics/statistics.**
 
 <br>
 
-## 📌 **Dashboard**
-
-Utilizing the same dataset analyzed earlier, this dashboard offers an additional perspective on NBA player performance and facilitates comparisons between player statistics. The dashboard consists of two sections: Leaderboard and Player Detailed Stats.
-
-In the Leaderboard section, users can view the top 10 leaders in various statistics for each year or team. Meanwhile, the Player Stats section provides detailed information on selected player statistics, including the actual values, percentiles against other players each year, and comparisons to other players.
+### Non-degree Education - DA
 
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/dash1.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/c_nondeg.png"> </kbd>
 </p>
 
+The non-formal activities/education most used by respondents with the Data Analyst profession are self-taught, online courses, and on-the-job training. The distribution of Data Analyst's non-formal education tends to be the same as the distribution for all developer professions as shown earlier.
+
+<br>
+
+### Annual Salary - DA
+
 <p align="center">
-    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/NBA-MVP-Predictions/main/assets/dash2.png"> </kbd> <br>
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/c_salary.png"> </kbd>
 </p>
+
+The annual salary distribution of respondents with the Data Analyst profession is in the form of a right-skewed distribution. The majority of annual salaries are in the range of $28,000-$100,000. The largest annual salary in this dataset is $2,000,000. The distribution of the Data Analyst's annual salary also tends to be similar to the distribution of all developers shown previously.
+
+<br>
+
+### Annual Salary Comparison For Total Skill(s) Used - DA
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/c_skill.png"> </kbd>
+</p>
+
+From the graph above, it can be seen that the total number of tech skills possessed does not have a significant correlation with the annual salary of a data analyst. While it may appear that possessing numerous technical skills enhances one's value and competency, this finding suggests that several other variables exhibit a more substantial correlation with the annual salary.
+
+<br>
+
+### Annual Salary Comparison For Each Tech Skills - DA
+
+<p align="center">
+    <kbd> <img width="1000" alt="share" src="https://raw.githubusercontent.com/buddymar/In-Demand-Data-Tech-Skills/main/assets/c_skill2.png"> </kbd>
+</p>
+
+From the graph above, it can be seen that there is no significant difference in the annual salary distribution between each tech skill in the language, database, platform, and web frame features. Hence, it is prudent to select our technical skills based on employer demand, prevalent choices within the professional domain, industry preferences, and similar factors.
+
+<br>
+
+## 📌 **Conclusion**
+
+To ensure clarity, I will focus solely on findings and implications pertinent to the ***data analyst*** job title in this conclusion section.
+
+### Tech Skill(s)
+
+- Based on a survey conducted on professional data analysts, the most widely used programming languages today are `SQL, JavaScript, HTML, Python,` and `Bash`. Another programming language that will be desired in the next few years (besides the current one used / worked with) is `C#`.
+    - `C#` is gaining popularity among data analysts due to its versatility, integration with the Microsoft ecosystem, performance, scalability, and cross-platform development capabilities. Its robust features make it well-suited for handling complex data analysis tasks and building scalable solutions for varying business needs.
+- The most widely used databases today are `MySQL, Microsoft SQL, PostgreSQL, SQLite,` and `MongoDB`. The desired database in the next few years tends to be the same as the database that is currently used. In other words, data professionals are satisfied with their current choice of database and see it as the preferred option for their future needs as well. This suggests a level of stability and confidence in the chosen database technology within the data analysis community.
+- Then, the most widely used platforms today are `Windows, Linux, Docker, AWS,` and `Android`. The desired platform in the next few years tends to be the same as the platform currently used. The implications are generally similar like databases.
+- For Web Frames, the most used today are `jQuery, ASP.NET, Angular, React.js,` and `Django`. Another Web Frame that will be desired in the next few years is `Vue.js`.
+    - `Vue.js` is expected to be desired by data analysts in the future due to its lightweight and flexible nature, ease of integration with existing projects, growing community support, and its capability to build dynamic and responsive user interfaces efficiently.
+
+<br>
+
+### Demographic Information(s)
+
+- The majority of data analysts hold Bachelor's or Master's degrees, with some having completed college/university studies without obtaining a degree.
+- Common majors among data analysts include computer science, information systems, and non-IT engineering, with a higher prevalence of mathematics and statistics majors compared to other developer professions.
+- Non-formal education activities frequently pursued by data analysts include self-teaching, online courses, and on-the-job training.
+- Annual salary distribution among data analysts typically falls within the range of $28,000 to $100,000, with the highest reported salary reaching $2,000,000.
+- Demographic characteristics such as formal education level, major, non-degree education, age, and salary are generally similar between data analysts and other IT professionals surveyed.
+
+<br>
+
+### Salary Comparison Using Tech Skill(s)
+
+Finally, for a data analyst, the total number of IT skills mastered or the use of certain IT skills does not affect the amount of annual salary that will be earned. While it may appear that possessing numerous technical skills enhances one's value and competency, this finding suggests that several other variables exhibit a more substantial correlation with the annual salary.
+Therefore, there are other aspects that are likely to have a greater influence on the annual salary that a data analyst earns.
+
+
