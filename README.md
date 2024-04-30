@@ -1,7 +1,7 @@
 # 📊 In-Demand Data Tech Skills: A Closer Look
 <br>
 
-**Platform**: Jupyter Notebook | [Notebook via nbviewer](https://nbviewer.org/github/buddymar/In-Demand-Data-Tech-Skills/blob/main/In%20Demand%20Data%20Tech%20Skills.ipynb) | [Notebook via Github](https://github.com/buddymar/In-Demand-Data-Tech-Skills/blob/main/In%20Demand%20Data%20Tech%20Skills.ipynb)<br>
+**Platform**: Jupyter Notebook | [View Notebook on nbviewer](https://nbviewer.org/github/buddymar/In-Demand-Data-Tech-Skills/blob/main/In%20Demand%20Data%20Tech%20Skills.ipynb) | [View Notebook on Github](https://github.com/buddymar/In-Demand-Data-Tech-Skills/blob/main/In%20Demand%20Data%20Tech%20Skills.ipynb)<br>
 **Programming Language**: Python <br>
 **Libraries**: Pandas, NumPy, Matplotlib, Seaborn <br>
 **Source Data**: IBM Data Analyst Certification Capstone Project via Coursera | [Stack Overflow](https://stackoverflow.blog/2019/04/09/the-2019-stack-overflow-developer-survey-results-are-in/) <br>
